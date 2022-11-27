@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --VerylightGrayishBlue: hsl(210, 60%, 98%);
+    --LightGrayishBlue1: hsl(211, 68%, 94%);
+    --LightGrayishBlue2: hsl(205, 33%, 90%);
+    --GrayishBlue: hsl(219, 14%, 63%);
+    --DarkGrayishBlue: hsl(219, 12%, 42%);
+    --VeryDarkBlue: hsl(224, 21%, 14%);
+
+    --ff-base: 'Plus Jakarta Sans', sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 800;
+
+    --br-regular: .38rem;
+    --br-circle: 50%;
+}
+
+/* 1. Use a more-intuitive box-sizing model. 
+2. remove default margin and padding */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 3. Allow percentage-based heights in the application */
+html,
+body {
+    height: 100%;
+}
+
+/* Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* 7. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Create a root stacking context */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* Utility Class */
+.LightGrayishBlue1 {
+    background-color: var(--LightGrayishBlue1);
+}
+
+.notif-list-grid {
+    padding: var(--p-regular);
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: .9rem;
+    border-radius: var(--br-regular);
+}
+
+p.profile-name {
+    font-size: .98rem;
+    font-weight: var(--fw-bold);
+    position: relative;
+}
+
+span.reguler-text {
+    font-size: .892rem;
+    font-weight: var(--fw-regular);
+    margin-inline: .19rem 0;
+    color: var(--VeryDarkBlue);
+}
+
+span.text-bold {
+    font-size: .924rem;
+    font-weight: var(--fw-bold);
+    margin-inline: .2rem 0;
+    color: var(--VeryDarkBlue);
+}
+
+p.time {
+    font-size: .88rem;
+    color: var(--GrayishBlue);
+}
+
+span.text-clr-blue {
+    color: var(--Blue);
+}
+
+/* End of Utility Class */
+
+/* General Styling */
+body {
+    font-family: var(--ff-base);
+    font-size: 1rem;
+    font-weight: var(--fw-regular);
+    background-color: var(--White);
+    color: var(--VeryDarkBlue);
+    padding: 1rem;
+}
+
+main {
+    max-width: 343px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.notif-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notif-title p {
+    font-size: 1.2rem;
+    font-weight: var(--fw-bold);
+}
+
+.notif-title .notif-total {
+    width: 34px;
+    height: 28px;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-inline: .42rem 0;
+    color: var(--White);
+    background-color: var(--Blue);
+    text-align: center;
+    vertical-align: center;
+    border-radius: var(--br-regular);
+}
+
+.notif-read {
+    font-size: .9168rem;
+    color: var(--DarkGrayishBlue);
+}
+
+.notif-list-container {
+    --p-regular: .88rem .78rem;
+    --p-msg: .88rem 1rem .88rem .9rem;
+    display: grid;
+    gap: 1rem;
+}
+
+p.profile-name.sm-red-circle-mark::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: .8rem;
+    bottom: .38rem;
+    background-color: var(--Red);
+    border-radius: var(--br-circle);
+}
+
+p.profile-name.sm-red-circle-angel::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 4.1rem;
+    bottom: .38rem;
+    background-color: var(--Red);
+    border-radius: var(--br-circle);
+}
+
+p.profile-name.sm-red-circle-jacob::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 7.32rem;
+    bottom: .38rem;
+    background-color: var(--Red);
+    border-radius: var(--br-circle);
+}
+
+.private-msg {
+    font-size: .9rem;
+    padding: var(--p-msg);
+    margin-block: .6rem 0;
+    color: var(--DarkGrayishBlue);
+    border: 1px solid var(--LightGrayishBlue2);
+    border-radius: var(--br-regular);
+}
+
+.notif-detail-items-flex {
+    display: flex;
+}
+
+.comment-picture {
+    width: 60px;
+}
+
+/* End of General Styling */
+
+
+/* Author Styling */
+.attribution {
+    margin-block: 1rem 0;
+    padding-block: 0 1rem;
+    text-align: center;
+}
+
+/* End of Author Styling */
+
+/* Media Querys */
+@media only screen and (min-width: 630px) {
+    main {
+        max-width: 598px;
+    }
+
+    p.profile-name.sm-red-circle-mark::after {
+        right: .42rem;
+    }
+
+    p.profile-name.sm-red-circle-angel::after {
+        right: 20.12rem;
+    }
+
+    p.profile-name.sm-red-circle-jacob::after {
+        right: 8.41rem;
+    }
+}
+
+/* End of Media Querys */
