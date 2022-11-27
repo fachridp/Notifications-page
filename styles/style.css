@@ -96,6 +96,11 @@ p.profile-name {
     font-size: .84rem;
     font-weight: var(--fw-bold);
     position: relative;
+    cursor: pointer;
+}
+
+p.profile-name:hover {
+    color: var(--Blue);
 }
 
 span.reguler-text {
@@ -110,6 +115,12 @@ span.text-bold {
     font-weight: var(--fw-bold);
     margin-inline: .2rem 0;
     color: var(--VeryDarkBlue);
+    cursor: pointer;
+}
+
+span.text-bold:hover {
+    font-weight: var(--fw-bold);
+    color: var(--Blue);
 }
 
 p.time {
@@ -169,6 +180,12 @@ main {
 .notif-read {
     font-size: .9168rem;
     color: var(--DarkGrayishBlue);
+    cursor: pointer;
+}
+
+.notif-read:hover {
+    font-weight: var(--fw-bold);
+    color: var(--Blue);
 }
 
 .notif-list-container {
@@ -221,6 +238,11 @@ p.profile-name.sm-red-circle-jacob::after {
     color: var(--DarkGrayishBlue);
     border: 1px solid var(--LightGrayishBlue2);
     border-radius: var(--br-regular);
+    cursor: pointer;
+}
+
+.private-msg:hover {
+    background-color: var(--LightGrayishBlue2);
 }
 
 .notif-detail-items-flex {
@@ -229,6 +251,7 @@ p.profile-name.sm-red-circle-jacob::after {
 
 .comment-picture {
     width: 60px;
+    cursor: pointer;
 }
 
 /* End of General Styling */
