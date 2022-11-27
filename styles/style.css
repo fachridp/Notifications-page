@@ -93,7 +93,7 @@ h6 {
 }
 
 p.profile-name {
-    font-size: .98rem;
+    font-size: .84rem;
     font-weight: var(--fw-bold);
     position: relative;
 }
@@ -128,17 +128,18 @@ body {
     font-family: var(--ff-base);
     font-size: 1rem;
     font-weight: var(--fw-regular);
-    background-color: var(--White);
     color: var(--VeryDarkBlue);
-    padding: 1rem;
+    background-color: var(--VerylightGrayishBlue);
 }
 
 main {
-    max-width: 343px;
+    max-width: 360px;
+    min-width: 360px;
     min-height: 100vh;
-    margin: 0 auto;
-    display: grid;
-    gap: 1rem;
+    margin: 0 auto 1rem auto;
+    padding: 1.4rem .88rem 0 .88rem;
+    border-radius: var(--br-regular);
+    background-color: var(--White);
 }
 
 .notif-flex {
@@ -172,7 +173,10 @@ main {
 
 .notif-list-container {
     --p-regular: .88rem .78rem;
-    --p-msg: .88rem 1rem .88rem .9rem;
+    --p-msg: .88rem .922rem .88rem .9rem;
+    --m-regular: 1.38rem 0 0 0;
+
+    margin: var(--m-regular);
     display: grid;
     gap: 1rem;
 }
@@ -182,7 +186,7 @@ p.profile-name.sm-red-circle-mark::after {
     width: 8px;
     height: 8px;
     position: absolute;
-    right: .8rem;
+    right: .32rem;
     bottom: .38rem;
     background-color: var(--Red);
     border-radius: var(--br-circle);
@@ -193,7 +197,7 @@ p.profile-name.sm-red-circle-angel::after {
     width: 8px;
     height: 8px;
     position: absolute;
-    right: 4.1rem;
+    right: 4.28rem;
     bottom: .38rem;
     background-color: var(--Red);
     border-radius: var(--br-circle);
@@ -204,7 +208,7 @@ p.profile-name.sm-red-circle-jacob::after {
     width: 8px;
     height: 8px;
     position: absolute;
-    right: 7.32rem;
+    right: 6.8rem;
     bottom: .38rem;
     background-color: var(--Red);
     border-radius: var(--br-circle);
@@ -232,7 +236,9 @@ p.profile-name.sm-red-circle-jacob::after {
 
 /* Author Styling */
 .attribution {
-    margin-block: 1rem 0;
+    max-width: 360px;
+    min-width: 360px;
+    margin: 1rem auto;
     padding-block: 0 1rem;
     text-align: center;
 }
@@ -240,9 +246,16 @@ p.profile-name.sm-red-circle-jacob::after {
 /* End of Author Styling */
 
 /* Media Querys */
-@media only screen and (min-width: 630px) {
+@media only screen and (min-width: 800px) {
+    body {
+        background-color: var(--VerylightGrayishBlue);
+    }
+
     main {
         max-width: 598px;
+        min-width: 634px;
+        margin-block: 2.2rem 0;
+        padding: 1.6rem;
     }
 
     p.profile-name.sm-red-circle-mark::after {
@@ -255,6 +268,22 @@ p.profile-name.sm-red-circle-jacob::after {
 
     p.profile-name.sm-red-circle-jacob::after {
         right: 8.41rem;
+    }
+
+    .notif-detail-items-flex {
+        justify-content: space-between;
+    }
+
+    .comment-picture {
+        width: 42px;
+    }
+
+    .attribution {
+        max-width: inherit;
+        min-width: inherit;
+        margin: 1rem auto;
+        padding-block: 0 1rem;
+        text-align: center;
     }
 }
 
